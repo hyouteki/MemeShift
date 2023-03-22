@@ -29,7 +29,7 @@ class MeanShift:
         this.__members: list[int] = []
         """list of indices of members"""
 
-    def __normalize(this):
+    def __normalize(this) -> None:
         max: list[float] = [1 for i in range(this.dim)]
         for point in this.rawData:
             for i in range(this.dim):
@@ -55,12 +55,12 @@ class MeanShift:
                 return point
         return None
 
-    def __assignMembership(this):
+    def __assignMembership(this) -> None:
         for member in this.__members:
             point: Point = this.data[member]
             this.data[member].setLabel(MeanShift.blocked)
             point.setPoint(this.__centroid.point)
-            this.__iterationNumber += len(this.__members)
+        this.__iterationNumber += 1
 
     def __shiftCentroid(this) -> None:
         junk: list = numpy.zeros(this.dim)
@@ -78,7 +78,7 @@ class MeanShift:
             point.setPoint(junk)
             this.data.append(point)
 
-    def __makeMember(this) -> Point:
+    def __makeMember(this) -> None:
         this.__members.clear()
         for i in range(len(this.data)):
             point: Point = this.data[i]
@@ -86,7 +86,7 @@ class MeanShift:
                 if Point.distance(this.__centroid, point) < this.bandwidth:
                     this.__members.append(i)
 
-    def doTheJob(this):
+    def doTheJob(this) -> None:
         if (this.dim == -1):
             print(colored("First initialize data", "red"))
             exit(1)
