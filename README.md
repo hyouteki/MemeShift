@@ -1,11 +1,13 @@
 # MemeShift
 **A image segmenting program built on Python using mean shift algorithm. [Image segmentation](https://en.wikipedia.org/wiki/Image_segmentation) is the process of partitioning a digital image into multiple image segments, also known as image regions or image objects**
 
-### Sample images (original vs segmented)
-
+### Orginal image
 <kbd> 
 <img src="https://github.com/Hyouteki/MemeShift/blob/main/dump/original.png" width="512" height="384"> 
-</kbd> <kbd> 
+</kbd> 
+
+### Segmented image
+<kbd> 
 <img src="https://github.com/Hyouteki/MemeShift/blob/main/dump/segmented.jpg" width="512" height="384">
 </kbd>
 
