@@ -1,15 +1,11 @@
 # MemeShift
-**An image segmenting program built on Python using mean shift algorithm. [Image segmentation](https://en.wikipedia.org/wiki/Image_segmentation) is the process of partitioning a digital image into multiple image segments, also known as image regions or image objects**
+An image segmenting program built on Python using mean shift algorithm. Built in object oriented pattern that is easy to understand and modify further. [Image segmentation](https://en.wikipedia.org/wiki/Image_segmentation) is the process of partitioning a digital image into multiple image segments, also known as image regions or image objects.
 
 ### Orginal image
-<kbd> 
-<img src="https://github.com/Hyouteki/MemeShift/blob/main/dump/original.png" width="512" height="384"> 
-</kbd> 
+<img src="https://github.com/Hyouteki/MemeShift/blob/main/dump/original.png" width="512" height="384">  
 
 ### Segmented image
-<kbd> 
 <img src="https://github.com/Hyouteki/MemeShift/blob/main/dump/segmented.jpg" width="512" height="384">
-</kbd>
 
 ### Contents
 - [Code explanation](#code-explanation)
@@ -18,7 +14,7 @@
 - [License](#license)
 
 ## Code explanation
-Mean shift algorithm works in the infinite cycle of 6 steps, until all the data points has been labeled.
+> Mean shift algorithm works in the infinite cycle of 6 steps, until all the data points has been labeled.
 
 ### Step-1 :: Initialize the centroid with a random unlabel data point
 ``` Python
@@ -155,11 +151,11 @@ __makeMember(this) -> None
 - Clone the git file `git clone https://github.com/Hyouteki/MemeShift.git` or download the latest release.
 - Type the following command `make install` to install all the necessary imports.
 - Run the sample driver code by `make doTheJob` [case-sensitive].
-- To segment a custom image replace the following path with your custom image path in driver.py file; line number 8
+- To segment a custom image replace the following path with your custom image path in [driver.py file; line number 8](https://github.com/Hyouteki/MemeShift/blob/457a8db99907e1946db33eb17b985d1811cd8ce8/driver.py#L8)
 ``` Python
 image = cv2.imread("dump/original.png")
 ```
-- **P.S. It will take around 10-15 minutes to finish segmenting**.
+> **IMPORTANT**: It will take around 10-15 minutes to finish segmenting.
 
 ## License
 ``` Markdown
