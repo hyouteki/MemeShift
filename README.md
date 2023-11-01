@@ -149,14 +149,14 @@ __makeMember(this) -> None
 - Clone the git file `git clone https://github.com/Hyouteki/MemeShift.git` or download the latest release.
 - Type the following command `make install` to install all the necessary imports.
 - Run the sample driver code by `make doTheJob` [case-sensitive].
-- To segment a custom image replace the following path with your custom image path in [driver.py file; line number 8](https://github.com/Hyouteki/MemeShift/blob/457a8db99907e1946db33eb17b985d1811cd8ce8/driver.py#L8)
-``` Python
-image = cv2.imread("dump/original.png")
-```
-> **IMPORTANT**: It will take around 10-15 minutes to finish segmenting.
+- To segment a custom image replace the following path with your custom image path.
+https://github.com/Hyouteki/MemeShift/blob/eebf62f9d0916d43a3f507f77496f0de91d0a02b/driver.py#L8
+
+> **WARNING**
+> It may take around 10-15 minutes to finish segmenting.
 
 ## License
-``` Markdown
+```
 MIT License
 
 Copyright (c) 2023 Lakshay
